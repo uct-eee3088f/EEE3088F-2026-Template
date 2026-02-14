@@ -21,6 +21,6 @@ jobs:
       # Step 2: Physics/DSP Unit Test
       - name: Verify DOA Logic (C Compilation)
         run: |
-          gcc -std=c11 firmware/src/doa_engine.c firmware/tests/test_main.c \
-          -I firmware/include -o doa_test -lm
-          ./doa_test
+          gcc -std=c11 firmware/src/doa_engine.c firmware/tests/test_doa.c \
+          -I firmware/include -o test_doa -lm
+          ./test_doa
