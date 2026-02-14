@@ -1,1 +1,1 @@
-gcc -std=c11 firmware/src/doa_algorithm.c firmware/tests/test_doa.c -I firmware/include -o firmware/tests/test_doa -lm && ./firmware/tests/test_doa
+python3 firmware/tests/verify_registers.py && gcc -std=c11 firmware/src/i2c_slave.c firmware/tests/test_i2c_logic.c -I firmware/include -o firmware/tests/i2c_audit -lm && ./firmware/tests/i2c_audit && gcc -std=c11 firmware/src/doa_engine.c firmware/tests/test_doa.c -I firmware/include -o firmware/tests/test_doa -lm && ./firmware/tests/test_doa

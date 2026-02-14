@@ -1,5 +1,5 @@
-#ifndef DOA_ALGORITHM_H
-#define DOA_ALGORITHM_H
+#ifndef DOA_ENGINE_H
+#define DOA_ENGINE_H
 
 #include <stdint.h>
 #include <stddef.h>

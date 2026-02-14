@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <math.h>
 #include <assert.h>
-#include "doa_algorithm.h"
+#include "doa_engine.h"
 
 #define PI 3.14159265358979323846
 #define SPEED_OF_SOUND 343.0 // m/s
