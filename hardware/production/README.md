@@ -1,11 +1,11 @@
-# M2 Fabrication Files (Production Ready)
+# /hardware/production/
 
 This folder contains the final output required for the EEE3088F manufacturing cycle. The course staff will use the files in this directory to place the bulk order with JLCPCB.
 
 ## 📦 Mandatory Files Checklist
-Before submitting, ensure the following three files are present and named correctly:
+Before submitting, ensure the following three files are present and named correctly. **Do not use spaces in filenames.**
 
-- [ ] `TEAM_NAME_M2_v1.zip` (Gerbers & Excellon Drill files)
+- [ ] `fabrication_v1.zip` (Gerbers & Excellon Drill files)
 - [ ] `BOM.csv` (Bill of Materials with LCSC part numbers)
 - [ ] `CPL.csv` (Component Placement / Centroid file)
 
@@ -22,7 +22,6 @@ Any violation of the following "Hard Gates" will result in your board being **RE
 ### 2. Electrical Safety (The 3.3V Law)
 - **Power:** The board must operate strictly on **3.3V DC**.
 - **Logic:** I2C pull-up resistors (SDA/SCL) **MUST** be tied to the 3.3V rail. **Connecting pull-ups to 5V will result in immediate rejection.**
-- **Current:** Total board current draw should not exceed 100mA.
 
 ### 3. Sourcing & Stock
 - **LCSC Numbers:** Every component in `BOM.csv` must have a valid LCSC part number.
@@ -35,7 +34,5 @@ Any violation of the following "Hard Gates" will result in your board being **RE
 - **Rotation:** Ensure the `Rotation` column in `CPL.csv` matches the Pin 1 orientation of your footprints.
 - **Board Outline:** The board edge/outline must be included in the Gerber ZIP on a dedicated layer (Mechanical or Keep-out).
 
-
-
 ---
-**Staff Note:** If these files are inconsistent with your Gradescope M2 submission, the Gradescope PDF remains the "Source of Truth" for marking, but the files in this folder are what will be built. Use at your own risk.
+**Staff Note:** The files in this folder are what will be built. Discrepancies between these files and your Gradescope submission may result in a manufacturing rejection.

@@ -5,7 +5,7 @@
 *.bin
 *.hex
 *.map
-suite          # This is the executable name from our autograder command
+suite          # Executable name from autograder
 
 # --- IDE & Build Folders ---
 build/
@@ -18,15 +18,37 @@ build/
 .DS_Store
 Thumbs.db
 
-# --- Hardware / KiCad (Optional but recommended) ---
-# Ignore KiCad backup files, leave the .kicad_pcb and .kicad_sch
+# --- Hardware / CAD Hygiene ---
+# Ignore KiCad/Altium/EasyEDA backup and temporary files
 **/*.bak
 **/*.cadbak
 **/*.lck
 **/*-backups/
+**/*.tmp
+**/*.bck
+**/*.sch-bak
+**/*.kicad_pcb-bak
 fp-info-cache
+_autosave-*
+
+# Ignore local CAD library tables that might differ between teammates
+fp-lib-table
+sym-lib-table
+
+# Ignore Altium/other CAD History and Log folders
+Project\ Outputs*/
+History/
+__Preview/
+Logging/
 
 # --- Python / Analysis ---
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+.venv/
+env/
+venv/
+
+# --- Documentation ---
+# Ignore temporary PDF locks or Office temp files
+~$*
